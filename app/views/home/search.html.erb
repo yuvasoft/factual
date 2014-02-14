@@ -1,0 +1,13 @@
+<div >
+<%= form_tag ('/home/index'),:method=>'post' do  %>
+  
+  <div class="field">
+    <%= label_tag :search,"Please enter city name" %><br>
+    <%= text_field_tag :search ,nil,:placeholder=>"Name"%>
+     <%= hidden_field_tag :data ,nil,:value=>"search"%>
+  </div>  
+  <div class="actions">
+    <%= submit_tag "Submit" %>
+  </div>
+<% end %>
+</div>

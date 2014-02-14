@@ -1,0 +1,29 @@
+
+ <%if !@factual.blank?%>
+<table border="3">
+	  <tr>
+  	<th>Name</th>
+    <th>Region</th>
+    <th>Telephone</th>
+    <th>Website</th>
+    <th>Telephone</th>
+    <th>Country</th>
+    <th>locality</th>
+    <th>Address</th>
+
+  </tr>
+ 
+<% @factual.each do |factual|%>
+
+  <tr>
+  	<td><%=factual['name']%></td>
+    <td><%= factual['region']%></td>
+    <td><%=factual['tel']%></td>
+    <td><%=factual['website']%></td>
+    <td><%=factual['country']%></td>
+    <td><%=factual['locality']%></td>
+    <td><%=factual['address']%></td>
+  </tr>
+  <%end%>
+  <%end%>
+</table> 

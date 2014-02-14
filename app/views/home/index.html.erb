@@ -1,0 +1,29 @@
+
+<%= link_to "Search by city From Factual.com",home_search_path%>
+<br/><br/>
+<%if !@factual.blank? %>
+<h3>Record Found <%=@factual.count %></h3>
+<table border="3">
+	  <tr>
+  	<th>Name</th>
+    <th>Region</th>
+    <th>Telephone</th>
+    <th>Website</th>   
+    <th>Country</th>
+    <th>locality</th>
+  </tr> 
+
+<% @factual.each do |factual|%>
+  <tr>
+  	<td><%=factual['name']%></td>
+    <td><%= factual['region']%></td>
+    <td><%=factual['tel']%></td>
+    <td><%=factual['website']%></td>
+    <td><%=factual['country']%></td>
+    <td><%=factual['locality']%></td>    
+  </tr>
+  <%end%> 
+</table> 
+ <%end%>
+
+ 
